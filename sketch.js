@@ -54,6 +54,7 @@ function draw(){
     }
     if(enemyGroup.isTouching(sword)){
       gamestate=END;
+      GOSound.play();
     }
     fruit();
     enemy();
@@ -66,7 +67,6 @@ function draw(){
     fruitGroup.setVelocityXEach(0);
     enemyGroup.setLifetimeEach(-1);
     fruitGroup.setLifetimeEach(-1);
-    GOSound.play();
     if(mousePressedOver(sword)){
       reset();
     }
